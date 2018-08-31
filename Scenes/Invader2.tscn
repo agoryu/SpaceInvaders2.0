@@ -1,13 +1,13 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Invader.gd" type="Script" id=1]
-[ext_resource path="res://Textures/invaders1-1.png" type="Texture" id=2]
-[ext_resource path="res://Textures/invaders1-2.png" type="Texture" id=3]
+[ext_resource path="res://Textures/invaders2-1.png" type="Texture" id=2]
+[ext_resource path="res://Textures/invaders2-2.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 30.4881, 23.0213 )
+extents = Vector2( 27.5291, 23.0213 )
 
 [sub_resource type="SpriteFrames" id=2]
 
@@ -61,7 +61,7 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Invader/InvaderArea" index="1"]
 
-scale = Vector2( 0.8, 0.8 )
+scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 2 )
 animation = "default"
 _sections_unfolded = [ "Transform" ]

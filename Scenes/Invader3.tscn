@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Invader.gd" type="Script" id=1]
-[ext_resource path="res://Textures/invaders1-1.png" type="Texture" id=2]
-[ext_resource path="res://Textures/invaders1-2.png" type="Texture" id=3]
+[ext_resource path="res://Textures/invaders3-1.png" type="Texture" id=2]
+[ext_resource path="res://Textures/invaders3-2.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -18,7 +18,7 @@ animations = [ {
 "speed": 2.0
 } ]
 
-[node name="Invader" type="Node2D"]
+[node name="Invader" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 

@@ -8,6 +8,7 @@ var raycast_down = null
 
 func _ready():
 	raycast_down = $RayCast
+	$InvaderArea/AnimatedSprite.play()
 
 func _process(delta):
 	var colliding = raycast_down.is_colliding()

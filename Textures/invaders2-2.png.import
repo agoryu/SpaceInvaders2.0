@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/invaders1-1.png-aa1c4103fa1a0676452ef77f144d536b.stex"
+path="res://.import/invaders2-2.png-f236b9f744f7dc71f76d3c50aae2bcf6.stex"
 
 [deps]
 
-source_file="res://Textures/invaders1-1.png"
-source_md5="e8d71bd85ac955ebe1493860920927a8"
+source_file="res://Textures/invaders2-2.png"
+source_md5="d57795f19a53f1ff75fd3042eeea7566"
 
-dest_files=[ "res://.import/invaders1-1.png-aa1c4103fa1a0676452ef77f144d536b.stex" ]
-dest_md5="ae8062d2e648a19c4f03801a191b88b3"
+dest_files=[ "res://.import/invaders2-2.png-f236b9f744f7dc71f76d3c50aae2bcf6.stex" ]
+dest_md5="66825d6a1d151124ac32d04ef501ce0f"
 
 [params]
 
