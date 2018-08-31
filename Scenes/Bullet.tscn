@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Bullet.gd" type="Script" id=1]
+[ext_resource path="res://Textures/ship.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 5.0708, 8.40339 )
+
+[node name="Bullet" type="Node2D"]
+
+scale = Vector2( 0.5, 1 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+speed = 200
+
+[node name="Bullet" type="KinematicBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+_sections_unfolded = [ "Collision" ]
+
+[node name="Sprite" type="Sprite" parent="Bullet" index="0"]
+
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 60, 0, 10, 30 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bullet" index="1"]
+
+position = Vector2( -0.0517998, -6.59169 )
+shape = SubResource( 1 )
+
+

@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/BulletInvaders.gd" type="Script" id=1]
+[ext_resource path="res://Textures/ship.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 5.05941, 15.0405 )
+
+[node name="BulletInvader" type="Node2D"]
+
+scale = Vector2( 0.5, 1 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+speed = 200
+
+[node name="KinematicBody" type="KinematicBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+
+[node name="Sprite" type="Sprite" parent="KinematicBody" index="0"]
+
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 90, 10, 10, 30 )
+_sections_unfolded = [ "Region" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody" index="1"]
+
+shape = SubResource( 1 )
+
+

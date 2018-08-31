@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/ColumnInvader.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Invader.tscn" type="PackedScene" id=2]
+
+[node name="ColumnInvader" type="Node2D"]
+
+position = Vector2( 35, 0 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+offset_screen = 25
+
+[node name="Invader" parent="." index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 0, 25 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Invader2" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 0, 85 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Invader3" parent="." index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 0, 145 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Invader4" parent="." index="3" instance=ExtResource( 2 )]
+
+position = Vector2( 0, 205 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Invader5" parent="." index="4" instance=ExtResource( 2 )]
+
+position = Vector2( 0, 265 )
+_sections_unfolded = [ "Transform" ]
+
+

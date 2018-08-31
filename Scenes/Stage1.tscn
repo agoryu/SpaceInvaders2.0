@@ -1,0 +1,83 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Ship.gd" type="Script" id=1]
+[ext_resource path="res://Textures/spaceship.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Army.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Defense.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 33.0461, 42.8284 )
+
+[node name="Stage1" type="Node2D"]
+
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ship" type="KinematicBody2D" parent="." index="0"]
+
+editor/display_folded = true
+position = Vector2( 523.733, 758.262 )
+scale = Vector2( 0.7, 0.7 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+speed = 150
+
+[node name="ShipArea" type="Area2D" parent="Ship" index="0"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Ship/ShipArea" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Ship" index="1"]
+
+texture = ExtResource( 2 )
+region_rect = Rect2( 40, 0, 40, 30 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="Army" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 0, 70 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Defense" parent="." index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 125, 600 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Defense2" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 355, 600 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Defense3" parent="." index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 580, 600 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Defense4" parent="." index="5" instance=ExtResource( 4 )]
+
+position = Vector2( 810, 600 )
+_sections_unfolded = [ "Transform" ]
+
+[connection signal="body_entered" from="Ship/ShipArea" to="Ship" method="_on_Area2D_body_entered"]
+
+
