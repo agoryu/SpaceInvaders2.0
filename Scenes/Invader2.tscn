@@ -1,26 +1,32 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Invader.gd" type="Script" id=1]
-[ext_resource path="res://Textures/invaders2-1.png" type="Texture" id=2]
-[ext_resource path="res://Textures/invaders2-2.png" type="Texture" id=3]
+[ext_resource path="res://Shaders/Invader.shader" type="Shader" id=2]
+[ext_resource path="res://Textures/invaders2-1.png" type="Texture" id=3]
+[ext_resource path="res://Textures/invaders2-2.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 27.5291, 23.0213 )
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="ShaderMaterial" id=2]
+
+render_priority = 0
+shader = ExtResource( 2 )
+
+[sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "default",
 "speed": 2.0
 } ]
 
-[node name="Invader" type="Node2D"]
+[node name="Invader" type="Node2D" index="0"]
 
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Material", "Transform" ]
 
 [node name="Invader" type="KinematicBody2D" parent="." index="0"]
 
@@ -61,10 +67,11 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Invader/InvaderArea" index="1"]
 
+material = SubResource( 2 )
 scale = Vector2( 0.7, 0.7 )
-frames = SubResource( 2 )
+frames = SubResource( 3 )
 animation = "default"
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Material", "Transform" ]
 
 [connection signal="body_entered" from="Invader/InvaderArea" to="Invader" method="_on_InvaderArea_body_entered"]
 
