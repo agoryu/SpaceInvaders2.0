@@ -7,10 +7,7 @@ path="res://.import/invaders1-1.png-f198b1407c64755887e7cb7b8229f3cf.stex"
 [deps]
 
 source_file="res://Others/invaders/invaders1-1.png"
-source_md5="e8d71bd85ac955ebe1493860920927a8"
-
 dest_files=[ "res://.import/invaders1-1.png-f198b1407c64755887e7cb7b8229f3cf.stex" ]
-dest_md5="ae8062d2e648a19c4f03801a191b88b3"
 
 [params]
 

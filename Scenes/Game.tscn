@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Gameplay.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Textures/spaceship.png" type="Texture" id=3]
 [ext_resource path="res://Textures/title.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Camera.gd" type="Script" id=5]
+[ext_resource path="res://Sound/invaderkilled.wav" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -22,7 +23,7 @@ use_filter = false
 font_data = ExtResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 __meta__ = {
@@ -64,6 +65,7 @@ autostart = false
 
 [node name="HUD" type="CanvasLayer" parent="." index="3"]
 
+editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -333,6 +335,17 @@ editor_draw_limits = false
 editor_draw_drag_margin = false
 script = ExtResource( 5 )
 _sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Explosion" type="AudioStreamPlayer2D" parent="." index="5"]
+
+stream = ExtResource( 6 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 [connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]
 

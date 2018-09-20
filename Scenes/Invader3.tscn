@@ -24,7 +24,7 @@ animations = [ {
 "speed": 2.0
 } ]
 
-[node name="Invader" type="Node2D" index="0"]
+[node name="Invader" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 

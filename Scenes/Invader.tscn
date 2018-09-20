@@ -10,13 +10,12 @@
 custom_solver_bias = 0.0
 extents = Vector2( 30.4881, 23.0213 )
 
-[sub_resource type="ShaderMaterial" id=3]
+[sub_resource type="ShaderMaterial" id=2]
 
 render_priority = 0
 shader = ExtResource( 2 )
-_sections_unfolded = [ "Resource", "shader_param" ]
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
@@ -25,7 +24,7 @@ animations = [ {
 "speed": 2.0
 } ]
 
-[node name="Invader" type="Node2D" index="0"]
+[node name="Invader" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -68,9 +67,9 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Invader/InvaderArea" index="1"]
 
-material = SubResource( 3 )
+material = SubResource( 2 )
 scale = Vector2( 0.8, 0.8 )
-frames = SubResource( 4 )
+frames = SubResource( 3 )
 animation = "default"
 _sections_unfolded = [ "Material", "Transform" ]
 

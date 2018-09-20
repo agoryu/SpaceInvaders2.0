@@ -29,6 +29,7 @@ func _process(delta):
 
 func _on_InvaderArea_body_entered(body):
 	if body.get("name").begins_with("Bullet"):
+		get_node("/root/Game/Explosion").play()
 		get_node("/root/Game").update_score(100)
 		get_node("/root/Game/Camera").shake(0.5, 10, 10)
 		body.queue_free()

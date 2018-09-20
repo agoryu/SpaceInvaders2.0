@@ -7,10 +7,7 @@ path="res://.import/bloc.png-ee8f5e9bfdaea9d137ee4d0c6191de70.stex"
 [deps]
 
 source_file="res://Textures/bloc.png"
-source_md5="b4aa1d0fbe651cb15509dce9f5643f69"
-
 dest_files=[ "res://.import/bloc.png-ee8f5e9bfdaea9d137ee4d0c6191de70.stex" ]
-dest_md5="d2b1f7646a4392b8a72c0c86edb35719"
 
 [params]
 

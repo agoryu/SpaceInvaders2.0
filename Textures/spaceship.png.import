@@ -7,10 +7,7 @@ path="res://.import/spaceship.png-35494ecefce7fdb2548b30a46fa28ff8.stex"
 [deps]
 
 source_file="res://Textures/spaceship.png"
-source_md5="04e5cb57c05962d1c040a21632882cd9"
-
 dest_files=[ "res://.import/spaceship.png-35494ecefce7fdb2548b30a46fa28ff8.stex" ]
-dest_md5="6eb20e0613424bbf694c25d3d077dc8b"
 
 [params]
 

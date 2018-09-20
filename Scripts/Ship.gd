@@ -36,6 +36,7 @@ func shooting():
 		bullet.position.y -= 50
 		get_parent().add_child(bullet)
 		bullet_delay = 40
+		$Shoot.play()
 
 func _on_Area2D_body_entered(body):
 	if !body.get("name").begins_with("Invader"):

@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Ship.gd" type="Script" id=1]
 [ext_resource path="res://Textures/spaceship.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Army.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Defense.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sound/shoot.wav" type="AudioStream" id=3]
+[ext_resource path="res://Scenes/Army.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Defense.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -18,7 +19,6 @@ __meta__ = {
 
 [node name="Ship" type="KinematicBody2D" parent="." index="0"]
 
-editor/display_folded = true
 position = Vector2( 523.733, 758.262 )
 scale = Vector2( 0.7, 0.7 )
 input_pickable = false
@@ -53,27 +53,40 @@ texture = ExtResource( 2 )
 region_rect = Rect2( 40, 0, 40, 30 )
 _sections_unfolded = [ "Region", "Transform" ]
 
-[node name="Army" parent="." index="1" instance=ExtResource( 3 )]
+[node name="Shoot" type="AudioStreamPlayer2D" parent="Ship" index="2"]
+
+position = Vector2( -748.19, -1083.23 )
+scale = Vector2( 1.42857, 1.42857 )
+stream = ExtResource( 3 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="Army" parent="." index="1" instance=ExtResource( 4 )]
 
 position = Vector2( 0, 70 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Defense" parent="." index="2" instance=ExtResource( 4 )]
+[node name="Defense" parent="." index="2" instance=ExtResource( 5 )]
 
 position = Vector2( 125, 600 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Defense2" parent="." index="3" instance=ExtResource( 4 )]
+[node name="Defense2" parent="." index="3" instance=ExtResource( 5 )]
 
 position = Vector2( 355, 600 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Defense3" parent="." index="4" instance=ExtResource( 4 )]
+[node name="Defense3" parent="." index="4" instance=ExtResource( 5 )]
 
 position = Vector2( 580, 600 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Defense4" parent="." index="5" instance=ExtResource( 4 )]
+[node name="Defense4" parent="." index="5" instance=ExtResource( 5 )]
 
 position = Vector2( 810, 600 )
 _sections_unfolded = [ "Transform" ]

@@ -7,10 +7,7 @@ path="res://.import/ship.png-80042eafac57196d96673928e667b808.stex"
 [deps]
 
 source_file="res://Textures/ship.png"
-source_md5="1b18df8d85e77a24a1a7805ec7ece510"
-
 dest_files=[ "res://.import/ship.png-80042eafac57196d96673928e667b808.stex" ]
-dest_md5="20f15eee3eceda026e4ee87366ed26f2"
 
 [params]
 

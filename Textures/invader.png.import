@@ -7,10 +7,7 @@ path="res://.import/invader.png-87b5b1f4d2acd128b53cf0c5d53d2fc9.stex"
 [deps]
 
 source_file="res://Textures/invader.png"
-source_md5="9b29afe61ce94348a9fcdf83a780293a"
-
 dest_files=[ "res://.import/invader.png-87b5b1f4d2acd128b53cf0c5d53d2fc9.stex" ]
-dest_md5="96e85e2c5023ea51d17029b708d32d01"
 
 [params]
 
